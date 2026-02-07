@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle, #051b14, #000);
+  color: #eafff4;
+}
+
+.top-bar {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,255,150,0.05);
+  border-bottom: 1px solid #00ff99;
+}
+
+.city-container {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+.city-map {
+  flex: 2;
+  display: grid;
+  grid-template-areas:
+    "core core"
+    "residential education"
+    "agriculture energy";
+  gap: 15px;
+  padding: 20px;
+}
+
+.zone {
+  border: 1px solid #00ff99;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.4s;
+  background: rgba(0,255,150,0.08);
+  box-shadow: 0 0 25px rgba(0,255,150,0.15);
+}
+
+.zone:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #00ff99;
+}
+
+.core { grid-area: core; }
+.residential { grid-area: residential; }
+.education { grid-area: education; }
+.agriculture { grid-area: agriculture; }
+.energy { grid-area: energy; }
+
+.info-panel {
+  flex: 1;
+  padding: 25px;
+  border-left: 1px solid #00ff99;
+  background: rgba(0,0,0,0.4);
+}
